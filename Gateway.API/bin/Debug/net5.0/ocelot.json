@@ -1,0 +1,81 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 29206
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/GetProducts",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 29206
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/AddProduct",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/customer",
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26456
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/GetCustomers",
+
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Customer/AddCustomer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26456
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/AddCustomer",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/UpdateCustomer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26456
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/UpdateCustomer",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/DeleteCustomer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26456
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/DeleteCustomer",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+  ]
+}
